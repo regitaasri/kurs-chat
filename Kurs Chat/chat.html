@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .chat{
+            width: 20%;
+            height: 10%;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="chat"></div>
+        <div>
+            <input type="text" class="input">
+            <button class="btn">Send</button>
+        </div>
+    </main>
+    <script>
+        let chat = document.querySelector(".chat");
+        const input = document.querySelector(".input");
+        const btn = document.querySelector(".btn");
+
+        btn.addEventListener("click", function(){
+            chat.innerHTML=chat.innerHTML + "<br/>" + input.value;
+            input.value="";
+        })
+    </script>
+</body>
+</html>

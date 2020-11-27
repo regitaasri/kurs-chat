@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Document</title>
+    <style>
+        table, td, th {
+            border: 1px solid black;
+        }
+        table {
+            width: auto;
+            border-collapse: collapse;
+        }
+        fieldset {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Kurs Rupiah - Mata Uang Asing</legend>
+            <table>
+                <tr>
+                    <th>Masukkan Nilai</th>
+                    <th>Valas</th>
+                    <th>Nilai Rupiah</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" class="input">
+                    </td>
+                    <td>
+                        <select class="valas">
+                            <option value="9915" id="US">Dollar US</option>
+                            <option value="13472">Dollar Singapore</option>
+                            <option value="874">Ringgit Malaysia</option>
+                            <option value="120">Yen Jepan</option>
+                            <option value="15888">Euro</option>
+                            <option value="3592">Riyal Arab Saudi</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="output">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+    <script>
+            const input = document.querySelector(".input");
+            const valas = document.querySelector(".valas");
+            const output = document.querySelector(".output");
+
+            if (valas.value=="9915") {
+                output.innerHTML = + parseInt(input.value)*9915;
+            }
+            else if (valas.value=="13472") {
+                output.innerHTML = + parseInt(input.value)*13472;
+            }
+            else if (valas.value=="874") {
+                output.innerHTML = + parseInt(input.value)*874;
+            }
+            else if (valas.value=="120") {
+                output.innerHTML = + parseInt(input.value)*120;
+            }
+            else if (valas.value=="15888") {
+                output.innerHTML = + parseInt(input.value)*15888;
+            }
+            else if (valas.value=="3592") {
+                output.innerHTML = + parseInt(input.value)*3592;
+            }
+    </script>
+</body>
+</html>
